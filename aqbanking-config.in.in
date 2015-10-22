@@ -1,0 +1,83 @@
+# $Id$
+# Author of this file: Martin Preuss<martin@libchipcard.de>
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+datarootdir=@datarootdir@
+includedir=@includedir@
+datadir=@datadir@
+
+result=""
+
+for d in $*; do
+    case $d in
+	--includes)
+	    result="$result @aqbanking_includes@ @gwenhywfar_includes@"
+	    ;;
+	--libraries)
+	    result="$result @aqbanking_ldflags@ @aqbanking_libs@"
+	    ;;
+	--libraries++)
+	    result="$result "
+	    ;;
+	--plugins)
+	    result="$result @aqbanking_plugindir@"
+	    ;;
+	--data)
+	    result="$result @aqbanking_pkgdatadir@"
+	    ;;
+
+        --has-qbanking)
+            result=@with_qbanking@
+            ;;
+	--qbanking-libraries)
+	    result="$result @aqbanking_ldflags@ @qbanking_libs@"
+	    ;;
+	--qbanking-plugins)
+	    result="$result @qbanking_plugindir@"
+	    ;;
+	--qbanking-helpdir)
+	    result="$result @qbanking_helpdir@"
+	    ;;
+
+        --has-aqhbci)
+            result=@with_aqhbci@
+            ;;
+	--aqhbci-libraries)
+	    result="$result @aqbanking_ldflags@ @aqhbci_libs@"
+	    ;;
+
+	--vmajor)
+	    result="$result @AQBANKING_VERSION_MAJOR@"
+	    ;;
+	--vminor)
+	    result="$result @AQBANKING_VERSION_MINOR@"
+	    ;;
+	--vpatchlevel)
+	    result="$result @AQBANKING_VERSION_PATCHLEVEL@"
+	    ;;
+	--vbuild)
+	    result="$result @AQBANKING_VERSION_BUILD@"
+	    ;;
+	--vtag)
+	    result="$result @AQBANKING_VERSION_TAG@"
+	    ;;
+        --vstring)
+	    result="$result @AQBANKING_VERSION_MAJOR@.@AQBANKING_VERSION_MINOR@.@AQBANKING_VERSION_PATCHLEVEL@"
+            ;;
+	*)
+	    echo "Usage:"
+	    echo "$0 --includes gives you the include flags"
+	    echo "$0 --libraries gives you the library flags"
+	    echo "$0 --vmajor gives the major version of AqBanking"
+	    echo "$0 --vminor gives the minor version of AqBanking"
+	    echo "$0 --vpatchlevel gives the patchlevel of AqBanking"
+	    echo "$0 --vbuild gives the build number of AqBanking"
+	    echo "$0 --vtag gives the tag of AqBanking (cvs, beta or stable)"
+	    echo "$0 --vstring returns a version string"
+	    exit 1
+	    ;;
+    esac
+done
+echo $result

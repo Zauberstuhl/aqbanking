@@ -1,0 +1,87 @@
+
+
+1. Object Orientation
+=====================
+In all documents concerning AqBanking the term "class" refers to modules, 
+because AqBanking follows the object-orientated pragma.
+
+Example: Functions concerning AB_TRANSACTION are inside the files
+transaction.c, transaction_p.h and transaction.h and start with
+AB_Transaction_Something. So AB_TRANSACTION is called a "class" inside
+this document.
+
+
+2. Header Files
+===============
+
+2.1 Private Header Files
+------------------------
+Header files ending in *_p.h are considered private header files, only to be
+included by the matching *.c file. These are not installed and MUST NOT be
+included by any other source file.
+
+
+2.2. Library-private Header Files
+---------------------------------
+Header files ending in *_l.h are considered private to AqBanking.
+These headers are also not installed and MUST NOT be included by any source
+file outside AqBanking (even not by plugins!).
+
+
+2.3. Backend Header Files
+-------------------------
+Header files ending in *_be.h can be included by backends but should NOT be
+included by applications. These header files might be shipped with special
+development packages dedicated to backend development.
+
+
+2.4. Public Header Files
+------------------------
+All other header files are public ones which all get installed and which are
+free to be included by applications and plugins.
+
+
+
+
+3. QT 3.x, moc, uic
+===================
+
+AqBanking makes use of GCC's visibility features. However, uic and moc of QT3
+are not aware of that feature, so they generate code which does not export all
+needed symbols. Therefore we added a small tool which adds EXPORT macros to
+those generated files.
+In order to use that tool correctly you'll have to use the following rules in
+the makefiles of AqBanking:
+
+%.moc.cpp: %.h
+	$(qt3_moc) -o $<.moc.tmp $< && \
+	echo "#ifdef HAVE_CONFIG_H" >$@ && \
+	echo "# include <config.h>" >>$@ && \
+	echo "#endif" >>$@ && \
+	cat $<.moc.tmp >>$@ && \
+	rm $<.moc.tmp
+
+
+%.ui.cpp: %.ui
+	$(UIC3) $< -impl $<.h -o $<.tmp && \
+	echo "#ifdef HAVE_CONFIG_H" >$@ && \
+	echo "# include <config.h>" >>$@ && \
+	echo "#endif" >>$@ && \
+	cat $<.tmp >>$@ && \
+	rm $<.tmp
+
+%.ui.h: %.ui
+	$(UIC3) $< -o $<.tmp && \
+	echo "#include <qbanking/qbanking.h>" >$@ && \
+	$(top_srcdir)/admin/insert_api.sh QBANKING_API < $<.tmp >>$@ && \
+	rm $<.tmp
+
+The last needs to be adapted for every frontend, e.g. for "QBanking" you would
+need QBANKING_API and the header <qbanking/qbanking.h> as used in
+this example. For "KBanking" you would use KBANKING_API and 
+<kbanking/kbanking.h>.
+
+
+
+
+

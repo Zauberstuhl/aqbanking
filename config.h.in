@@ -1,0 +1,314 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* if plugin init is wanted */
+#undef AQBANKING_ENABLE_INIT_PLUGINS
+
+/* whether aqb is a subproject */
+#undef AQBANKING_IS_SUBPROJECT
+
+/* effective SO version */
+#undef AQBANKING_SO_EFFECTIVE_STR
+
+/* plugin availability */
+#undef AQBANKING_WITH_PLUGIN_BACKEND_AQEBICS
+
+/* plugin availability */
+#undef AQBANKING_WITH_PLUGIN_BACKEND_AQHBCI
+
+/* plugin availability */
+#undef AQBANKING_WITH_PLUGIN_BACKEND_AQNONE
+
+/* plugin availability */
+#undef AQBANKING_WITH_PLUGIN_BACKEND_AQOFXCONNECT
+
+/* effective SO version */
+#undef AQEBICS_SO_EFFECTIVE_STR
+
+/* build */
+#undef AQEBICS_VERSION_BUILD
+
+/* full version string */
+#undef AQEBICS_VERSION_FULL_STRING
+
+/* major version */
+#undef AQEBICS_VERSION_MAJOR
+
+/* minor version */
+#undef AQEBICS_VERSION_MINOR
+
+/* patchlevel */
+#undef AQEBICS_VERSION_PATCHLEVEL
+
+/* version string */
+#undef AQEBICS_VERSION_STRING
+
+/* tag */
+#undef AQEBICS_VERSION_TAG
+
+/* effective SO version */
+#undef AQHBCI_SO_EFFECTIVE_STR
+
+/* build */
+#undef AQHBCI_VERSION_BUILD
+
+/* full version string */
+#undef AQHBCI_VERSION_FULL_STRING
+
+/* major version */
+#undef AQHBCI_VERSION_MAJOR
+
+/* minor version */
+#undef AQHBCI_VERSION_MINOR
+
+/* patchlevel */
+#undef AQHBCI_VERSION_PATCHLEVEL
+
+/* version string */
+#undef AQHBCI_VERSION_STRING
+
+/* tag */
+#undef AQHBCI_VERSION_TAG
+
+/* effective SO version */
+#undef AQOFXCONNECT_SO_EFFECTIVE_STR
+
+/* build */
+#undef AQOFXCONNECT_VERSION_BUILD
+
+/* full version string */
+#undef AQOFXCONNECT_VERSION_FULL_STRING
+
+/* major version */
+#undef AQOFXCONNECT_VERSION_MAJOR
+
+/* minor version */
+#undef AQOFXCONNECT_VERSION_MINOR
+
+/* patchlevel */
+#undef AQOFXCONNECT_VERSION_PATCHLEVEL
+
+/* version string */
+#undef AQOFXCONNECT_VERSION_STRING
+
+/* tag */
+#undef AQOFXCONNECT_VERSION_TAG
+
+/* Define if DLL is built */
+#undef BUILDING_AQBANKING_DLL
+
+/* Define if DLL is built */
+#undef BUILDING_AQEBICS_DLL
+
+/* Define if DLL is built */
+#undef BUILDING_AQHBCI_DLL
+
+/* Define if DLL is built */
+#undef BUILDING_AQOFXCONNECT_DLL
+
+/* if DLL is to be built */
+#undef BUILDING_DLL
+
+/* Define if you want debugging code enabled. */
+#undef DEBUG
+
+/* whether local install is wanted */
+#undef ENABLE_LOCAL_INSTALL
+
+/* visibility */
+#undef GCC_WITH_VISIBILITY_ATTRIBUTE
+
+/* Define to 1 if you have the declaration of `sigprocmask', and to 0 if you
+   don't. */
+#undef HAVE_DECL_SIGPROCMASK
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* Define to 1 if you have the <gmp.h> header file. */
+#undef HAVE_GMP_H
+
+/* whether I18N is available */
+#undef HAVE_I18N
+
+/* Define to 1 if you have the <iconv.h> header file. */
+#undef HAVE_ICONV_H
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* if KTOBLZCHECK is available */
+#undef HAVE_KTOBLZCHECK
+
+/* Define to 1 if you have the <libintl.h> header file. */
+#undef HAVE_LIBINTL_H
+
+/* Define to 1 if you have the <locale.h> header file. */
+#undef HAVE_LOCALE_H
+
+/* Define to 1 if you have the `memmove' function. */
+#undef HAVE_MEMMOVE
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the `memset' function. */
+#undef HAVE_MEMSET
+
+/* Define to 1 if you have the `setlocale' function. */
+#undef HAVE_SETLOCALE
+
+/* Define to 1 if you have the <signal.h> header file. */
+#undef HAVE_SIGNAL_H
+
+/* Define to 1 if you have the `snprintf' function. */
+#undef HAVE_SNPRINTF
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the `strcasecmp' function. */
+#undef HAVE_STRCASECMP
+
+/* Define to 1 if you have the `strdup' function. */
+#undef HAVE_STRDUP
+
+/* Define to 1 if you have the `strerror' function. */
+#undef HAVE_STRERROR
+
+/* Define to 1 if you have the `strftime' function. */
+#undef HAVE_STRFTIME
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <termios.h> header file. */
+#undef HAVE_TERMIOS_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#undef LT_OBJDIR
+
+/* if BeOS is used */
+#undef OS_BEOS
+
+/* if Apple Darwin is used */
+#undef OS_DARWIN
+
+/* if FreeBSD is used */
+#undef OS_FREEBSD
+
+/* if linux is used */
+#undef OS_LINUX
+
+/* host system */
+#undef OS_NAME
+
+/* if NetBSD is used */
+#undef OS_NETBSD
+
+/* if OpenBSD is used */
+#undef OS_OPENBSD
+
+/* if PalmOS is used */
+#undef OS_PALMOS
+
+/* if this is a POSIX system */
+#undef OS_POSIX
+
+/* host system */
+#undef OS_SHORTNAME
+
+/* if Solaris is used */
+#undef OS_SOLARIS
+
+/* system type */
+#undef OS_TYPE
+
+/* if WIN32 is used */
+#undef OS_WIN32
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Define to 1 if your <sys/time.h> declares `struct tm'. */
+#undef TM_IN_SYS_TIME
+
+/* GTK2Gui availability */
+#undef USE_GWENGUI_GTK2
+
+/* Enable extensions on AIX 3, Interix.  */
+#ifndef _ALL_SOURCE
+# undef _ALL_SOURCE
+#endif
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# undef _GNU_SOURCE
+#endif
+/* Enable threading extensions on Solaris.  */
+#ifndef _POSIX_PTHREAD_SEMANTICS
+# undef _POSIX_PTHREAD_SEMANTICS
+#endif
+/* Enable extensions on HP NonStop.  */
+#ifndef _TANDEM_SOURCE
+# undef _TANDEM_SOURCE
+#endif
+/* Enable general extensions on Solaris.  */
+#ifndef __EXTENSIONS__
+# undef __EXTENSIONS__
+#endif
+
+
+/* Version number of package */
+#undef VERSION
+
+/* Define to 1 if on MINIX. */
+#undef _MINIX
+
+/* Define to 2 if the system does not provide POSIX.1 features except with
+   this defined. */
+#undef _POSIX_1_SOURCE
+
+/* Define to 1 if you need to in order for `stat' and other things to work. */
+#undef _POSIX_SOURCE
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const

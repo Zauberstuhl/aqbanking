@@ -1,0 +1,619 @@
+
+This file is no longer maintained. See ChangeLog for recent news.
+
+
+
+===========================================================================
+               Released AqBanking - 3.99.7rc1 (2009-01-22)
+===========================================================================
+
+This is the first release candidate for AqBanking4. Some bugs have been 
+fixed.
+
+
+===========================================================================
+               Released AqBanking - 3.99.0 (2008-11-08)
+===========================================================================
+
+This is the first beta release of AqBanking4. Now multiple applications can
+use AqBanking concurrently without interference. This was archieved by 
+implementing a lock-and-reload mechanism which makes sure that the latest
+configuration is used in any case. AqBanking4 facilitates import of previous
+configurations by the application. The SWIFT parser has yet again been 
+improved.
+
+This release requires Gwenhywfar 3.5.2 or better.
+
+
+===========================================================================
+               Released AqBanking - 3.7.2 (2008-08-26)
+===========================================================================
+
+This release fixes a problem with some HBCI-RDH accounts when requesting 
+the system id. A CSV profile for Austrian Postbank has been added.
+
+
+===========================================================================
+               Released AqBanking - 3.7.1 (2008-08-16)
+===========================================================================
+
+This release features workarounds for recently discovered problems with
+HBCI, improves the CSV importer and adds two CSV profiles. The OFX parser
+is now more tolerant (thanks to David Reiser for providing test files).
+
+
+===========================================================================
+               Released AqBanking - 3.7.0 (2008-08-11)
+===========================================================================
+
+This release fixes many HBCI-related problems, features a safer PIN 
+handling and provides improved support for WIN32 platforms.
+Error responses to segment HKEND with HBCI job HKSYNC are now ignored,
+a CSV profil for LBB Berlin has been added and the build system was cleaned
+up. The iTAN mode to be used can now be chosen by the user.
+
+This release needs at least Gwenhywfar 3.4.0.
+
+
+===========================================================================
+               Released AqBanking - 3.6.2 (2008-07-09)
+===========================================================================
+
+This release fixes two serious bugs which could crash an application.
+An update is recommended.
+
+
+===========================================================================
+               Released AqBanking - 3.6.1 (2008-07-08)
+===========================================================================
+
+This release fixes some minor bugs. It allows for the HBCI version to be
+selected even in PIN/TAN mode. The account type can now also be set from 
+within the graphical setup dialogs.
+
+
+===========================================================================
+               Released AqBanking - 3.6.0 (2008-07-01)
+===========================================================================
+
+This release adds a SEPA exporter which is able to create CCM documents. It
+simplifies working with ImExporterContexts.
+
+
+===========================================================================
+               Released AqBanking - 3.5.1 (2008-06-11)
+===========================================================================
+
+This release fixes some more bugs and allows to be build with the special
+version of aqbanking-cli with EBICS support.
+When a new pin is to be entered for any reason (e.g. changing the password
+of a key file) the user is now always asked (no pin caching in this case).
+
+
+===========================================================================
+               Released AqBanking - 3.5.0 (2008-06-06)
+===========================================================================
+
+This release improves support for FinTS3 (now transfers/debit notes work in
+Pin/Tan mode of FinTS3). The TAN method can now be choosen by the user (no 
+GUI yet). Some bugs have been fixed and the CSV exporter now exports values
+in floating point format instead of rationals (however, rationals are still
+supported here).
+
+
+===========================================================================
+               Released AqBanking - 3.4.2 (2008-05-27)
+===========================================================================
+
+This release updates the German bank info files and adds export 
+capabilities to the DTAUS ImExporter module.
+
+
+===========================================================================
+               Released AqBanking - 3.4.1 (2008-04-25)
+===========================================================================
+
+This release fixes a problem with some weird SWIFT MT940 files. Transfer
+jobs now add transfers to the IMEXPORTER given to AB_Banking_ExecuteJobs.
+
+
+===========================================================================
+               Released AqBanking - 3.4.0 (2008-04-22)
+===========================================================================
+
+This is a bugfix and cleanup release. Obsolete code has been removed
+and some bugs in the SWIFT parser have been fixed. All plugins are now
+loaded using GWEN's plugin framework. The OFX parser is now able to import
+investment accounts. Support for static linking has been improved.
+
+
+===========================================================================
+               Released AqBanking - 3.3.0 (2008-03-16)
+===========================================================================
+
+This release fixes many bugs especially in the HBCI code. AqBanking now 
+starts to manage CryptToken (because this is now used in two backends).
+This release requires Gwenhywfar 3.2.0 or better.
+
+
+===========================================================================
+               Released AqBanking - 3.2.1 (2008-02-08)
+===========================================================================
+
+This release fixes two bugs: One in the HBCI backend and the other in the 
+OFX parser. The AqHBCI user wizard now automatically sets the NO_BASE64
+flag for "Dt. Apotheker- und Aerztebank".
+
+
+===========================================================================
+               Released AqBanking - 3.2.0 (2008-01-29)
+===========================================================================
+
+This release now finally works with APO Bank (their server is quite special).
+The user settings page of the AqHBCI setup wizard now offers some advanced
+settings. Informational bank messages are now stored in the imexporter 
+context. This release has preliminary support for FinTS 3.0 (the successor
+of HBCI). Some bugs have been fixed.
+
+
+===========================================================================
+               Released AqBanking - 3.1.1 (2008-01-28)
+===========================================================================
+
+This release adds the option "--hbciversion" to the AqHBCI tool. This is 
+used to select the HBCI protocol version to be used. It also tries to fix
+a problem with transfers in 2-step pin/tan mode (in this mode sometimes the
+job result was not available. The QT4-port code has been fixed.
+
+
+===========================================================================
+               Released AqBanking - 3.1.0 (2008-01-25)
+===========================================================================
+
+This release fixes some important bugs and adds basic supports for import/
+export of securities (stocks, mutual funds etc).
+
+
+===========================================================================
+               Released AqBanking - 3.0.1 (2007-11-27)
+===========================================================================
+
+This release fixes an important bug in Pin/Tan mode. An update is strongly
+recommended.
+
+
+===========================================================================
+               Released AqBanking - 3.0.0 (2007-11-22)
+===========================================================================
+
+This release fixes a few bugs.
+
+
+===========================================================================
+               Released AqBanking - 2.9.17rc5 (2007-11-17)
+===========================================================================
+
+This release simplifies WIN32 installations.
+
+
+===========================================================================
+               Released AqBanking - 2.9.16rc4 (2007-11-14)
+===========================================================================
+
+This is a bugfix and cleanup release.
+
+
+===========================================================================
+               Released AqBanking - 2.9.15rc3 (2007-11-13)
+===========================================================================
+
+This release introduces yet more workarounds for difficult servers.
+
+
+===========================================================================
+               Released AqBanking - 2.9.14rc2 (2007-11-11)
+===========================================================================
+
+This release introduces workarounds for common server problems.
+
+
+===========================================================================
+               Released AqBanking - 2.9.13rc1 (2007-11-09)
+===========================================================================
+
+This is a release candidate for the next stable release. This version adds
+the command "getcert" to the aqhbci-tool.
+
+
+===========================================================================
+               Released AqBanking - 2.9.12beta (2007-11-07)
+===========================================================================
+
+This is a bugfix release.
+
+
+===========================================================================
+               Released AqBanking - 2.9.11beta (2007-11-03)
+===========================================================================
+
+This release fixes some bugs in AqHBCI. It is now more tolerant when
+checking the name of a remote signer since the security does not come from
+the signer name but from the signature.
+
+
+===========================================================================
+               Released AqBanking - 2.9.10beta (2007-11-02)
+===========================================================================
+
+The HBCI user wizard now retries retrieving of SSL certificates with SSL3
+in case the default SSL setup doesn't work. This version only installs a 
+single configuration shell script (aqbanking-config). This is now able to
+return the configuration of AqHBCI and QBanking as well so there is no need
+for multiple of those files.
+
+
+===========================================================================
+               Released AqBanking - 2.9.9beta (2007-10-31)
+===========================================================================
+
+With this release the HBCI setup wizard is back and working again. Some
+important bugs have been fixed and the German bank info files have been
+updated.
+
+
+===========================================================================
+               Released AqBanking - 2.9.8beta (2007-10-30)
+===========================================================================
+
+The previous release was missing two files.
+
+
+===========================================================================
+               Released AqBanking - 2.9.7beta (2007-10-28)
+===========================================================================
+
+This release fixes some bugs in AqOfxConnect and a potential problem in
+AqHBCI. With the latest CVS version of LibOFX it now also allows changing
+some protocol-relevant settings (like appid, OFX header version).
+
+
+===========================================================================
+               Released AqBanking - 2.9.6beta (2007-10-27)
+===========================================================================
+
+This release features support for OFX Direct Connect again. The tutorials 
+have been adapted so that they demonstrate the current API. AqBanking is now
+completely relocatable on WIN32 platforms (and if enabled by a configure
+option on Linux as well).
+
+
+===========================================================================
+               Released AqBanking - 2.9.5beta (2007-10-25)
+===========================================================================
+
+The previous release was missing a file. This release is complete.
+
+
+===========================================================================
+               Released AqBanking - 2.9.4beta (2007-10-24)
+===========================================================================
+
+This is the first release of AqBanking which no longer requires OpenSSL.
+It is also the first to be prepared for cross-compiling for win32 platforms.
+Pin/Tan with Netbank works again and many bugs from the last beta release
+have been fixed. This version now uses Gwen's new CryptToken framework.
+
+
+===========================================================================
+               Released AqBanking - 2.9.3beta (2007-09-11)
+===========================================================================
+
+With this release AqBanking has been adapted to the latest version of 
+Gwenhywfar. Currently the only working online banking backend is AqHBCI, 
+the other backends will be reenabled as needed. 
+This release needs Gwenhywfar 2.9.2beta.
+
+
+===========================================================================
+               Released AqBanking - 2.9.2beta (2007-05-14)
+===========================================================================
+
+This release fixes some major bugs in the previous version. A new banking 
+job for loading prepaid cards for cell phones has been added (so far 
+implemented only for HBCI). Started working on FinTS3 support in AqHBCI.
+
+
+===========================================================================
+               Released AqBanking - 2.9.1beta (2007-04-04)
+===========================================================================
+
+This release fixes some important bugs discovered after the previous release.
+
+
+===========================================================================
+               Released AqBanking - 2.9.0beta (2007-04-03)
+===========================================================================
+
+This is the first release of AqBanking3. It now uses libgmp instead of simple
+"double" type for more precise calculations. AqBanking now uses the GUI
+functions of Gwenhywfar3 instead of declaring its own GUI modules. The OFX DC
+plugin now supports additional account types. General code cleanup.
+This version requires Gwenhywfar3>=2.9.0beta and Libchipcard3>=3.1.0beta.
+
+
+===========================================================================
+               Released AqBanking - 2.2.4 (2006-12-27)
+===========================================================================
+
+AqGeldKarte has been fixed and adapted to Libchipcard3 which is now required
+instead of Libchipcard2. The QBanking frontend is now less verbous, QT should
+now be found on Darwin, too. Some other minor bugs have been fixed as well
+and the bank data files for Germany have been updated.
+
+
+===========================================================================
+               Released AqBanking - 2.2.3 (2006-10-10)
+===========================================================================
+
+This version now allows to setup iTAN HBCI accounts.
+
+
+===========================================================================
+               Released AqBanking - 2.2.2beta (2006-10-09)
+===========================================================================
+
+This version has improved support for HBCI iTAN mode, adds an import profile
+for ABN AMRO Bank (NL) and fixes some errors. Please test!
+
+
+===========================================================================
+               Released AqBanking - 2.2.1 (2006-08-25)
+===========================================================================
+
+This release fixes some minor bugs and typos. The HBCI plugin now also works 
+with HBCI servers with a faulty iTAN implementation (using iTAN method 900).
+
+
+===========================================================================
+               Released AqBanking - 2.2.0 (2006-07-13)
+===========================================================================
+
+This release introduces support for HBCI iTAN mode, adds the ability to 
+modify the PIN in PIN/TAN mode and finally fixes some nasty umlaut problems. 
+An XML exporter for transaction export has been added. Bank info files for
+Germany and Austria have been updated.
+
+
+===========================================================================
+               Released AqBanking - 2.1.0 (2006-06-15)
+===========================================================================
+
+The YellowNet plugin now uses XML files provided by PostFinance instead of
+hard-to-get MT940 files when downloading transaction statements. It also
+contains some OFX-related fixes and an improved German translation.
+
+
+===========================================================================
+               Released AqBanking - 2.0.0 (2006-04-03)
+===========================================================================
+
+No major bugs have been reported so I decided to finally release 
+AqBanking 2.0.0.
+
+
+===========================================================================
+               Released AqBanking - 1.9.11rc1 (2006-03-26)
+===========================================================================
+
+This is the first release candidate of AqBanking2. Creating users for HBCI 
+and now works again and an important bug in OFX DirectConnect has been
+fixed.
+
+
+===========================================================================
+               Released AqBanking - 1.9.10beta (2006-03-23)
+===========================================================================
+
+This release fixes a bug in AqHBCI which prevented PINTAN media from being
+created. It also now includes an improved version of the SWIFT parser which
+reads more kinds of SWIFT documents (especially those provided by some
+Swiss banks).
+
+
+===========================================================================
+               Released AqBanking - 1.9.9beta (2006-03-20)
+===========================================================================
+
+This release fixes some bugs in YellowNet code and improves the documentation.
+It needs the latest release of Gwenhywfar (2.1.0).
+
+
+===========================================================================
+               Released AqBanking - 1.9.8beta (2006-03-07)
+===========================================================================
+
+This release fixes some bugs concerning importing/creating HBCI users and
+problems with the YellowNet backend. The build system and the API have been 
+cleaned up (including documentation). An update is recommended.
+Depending applications need to be recompiled due to changes in the API.
+This version is source-compatible with the previous release.
+
+
+===========================================================================
+               Released AqBanking - 1.9.7beta (2006-02-06)
+===========================================================================
+
+This release fixes some bugs in the build-system, adds a CSV profile for
+American Express cards and some tutorials. An updated RPM specfile is now
+available.
+
+
+===========================================================================
+               Released AqBanking - 1.9.6beta (2006-01-30)
+===========================================================================
+
+This release fixes a problem of AqHBCI with attach points. It now allows the
+reception of multi-message responses from the bank.
+
+
+===========================================================================
+               Released AqBanking - 1.9.5beta (2006-01-28)
+===========================================================================
+
+This version fixes some makefiles of the new backends.
+
+
+===========================================================================
+               Released AqBanking - 1.9.4beta (2006-01-27)
+===========================================================================
+
+This release adds a backend for YellowNet (Suisse Postfinance, binary-only),
+adds a fake-backend to be used for accounts which are not managed via any
+other online banking backend and fixes some bugs. Most importantly, OFX Direct
+Connect now works again (thanks to David Reiser!!)
+
+
+===========================================================================
+               Released AqBanking - 1.9.3beta (2006-01-26)
+===========================================================================
+
+This release fixes some bugs, improves safety of working with crypt tokens
+(now a crypt token can report a bad pin), includes a help system, features
+hidden visibility for the QT3-depending files and an improved GTK2 frontend.
+Nearly complete German translation is now provided.
+
+
+===========================================================================
+               Released AqBanking - 1.9.2beta (2006-01-19)
+===========================================================================
+
+This relese fixes a bug which made Gnucash unable to find the QT3 wizard.
+It also reintroduces support for OFX DirectConnect (yet untested, though).
+
+
+===========================================================================
+               Released AqBanking - 1.9.1beta (2006-01-17)
+===========================================================================
+
+This release fixes many bugs in the previous version. It is now able to
+completely migrate user configuration data from older versions to the
+current one.
+
+
+===========================================================================
+               Released AqBanking - 1.9.0beta (2006-01-11)
+===========================================================================
+
+This version features a complete redesign of the configuration framework.
+It also removes some deprecated functions and makes use of GCCs visibility
+feature (thus removing several hundred symbols from the libraries export
+table which decreases application loading time).
+
+
+===========================================================================
+               Released AqBanking - 1.8.1beta (2005-12-15)
+===========================================================================
+
+This version fixes some network problems and cleans up the build system.
+It now allows to choose the transfer mode independantly for transfer orders
+and debit notes.
+
+
+===========================================================================
+               Released AqBanking - 1.8.0beta (2005-11-22)
+===========================================================================
+
+This version fixes many bugs, adapts to Gwenhywfar2 (1.99.0) and fixes
+many problems encountered in HBCI-PIN/TAN mode. The user setup wizard for
+HBCI has been rewritten (but it can only import existing media for now).
+
+
+===========================================================================
+               Released AqBanking - 1.6.0beta (2005/09/02)
+===========================================================================
+
+This release fixes some bugs and adds job-related logging (to be viewed with
+aqbanking-tool's new command "joblog").
+
+
+===========================================================================
+               Released AqBanking - 1.3.0beta (2005/07/15)
+===========================================================================
+
+This release now includes all backends (AqHBCI, AqDTAUS,
+AqGeldKarte, AqOfxConnect) and all frontends (console, gtk2, qt3,
+kde3) and all QT3 setup wizards for all backends.  AqHBCI now uses
+Gwenhywfar's CryptToken plugins instead of its own media
+plugins. "aqhbci-tool" can now be used to setup a new user from
+console.  An ERI importer plugin has been added, some important
+bugs have been fixed and code duplication has been replaced by the
+new QT3 frontend. (Note: Further information in German can be
+found on http://linuxwiki.de/AqBanking )
+
+Please note that the media plugins for AqHBCI (DDVCard, RSACard)
+are now obsoleted by the latest versions of AqBanking, Gwen and
+Libchipcard2.
+
+New package structure since aqbanking-1.3.0
+-------------------------------------------
+
+Starting from aqbanking-1.3.0, the aqbanking package now includes
+all sub-packages that previously were released in separate
+packages or projects.
+
+Source packages
+---------------
+
+In particular, all the following source packages are now included
+by and obsoleted by aqbanking-1.3.0.tar.gz and newer versions:
+
+aqhbci
+aqhbci-qt-tools
+aqdtaus
+aqdtaus-qt-tools
+aqgeldkarte
+aqgeldkarte-qt-tools
+aqofxconnect
+aqofxconnect-qt-tools
+kbanking
+g2banking
+
+-> Again, these are now all obsoleted by aqbanking-1.3.0.tar.gz
+and newer.
+
+The chipcard-related sub-packages of aqbanking/aqhbci are also
+obsoleted by aqbanking-1.3.0 and libchipcard-1.9.13, because the
+relevant source code files are now included in libchipcard:
+
+aqhbci-ddvcard
+aqhbci-rsacard
+
+-> Again, these are now all obsoleted by aqbanking-1.3.0.tar.gz
+with libchipcard-1.9.13.tar.gz and newer.
+
+
+RPM packages
+------------
+
+The aqbanking-1.3.0.tar.gz source packages will create several
+different RPM packages according to the different requirements of
+each of its parts. In particular:
+
+aqbanking -> Still named  aqbanking
+aqhbci    -> Obsoleted by aqbanking
+aqdtaus   -> Obsoleted by aqbanking
+
+aqhbci-qt-tools  -> Obsoleted by aqbanking-qt3
+aqdtaus-qt-tools -> Obsoleted by aqbanking-qt3
+
+kbanking -> Obsoleted by aqbanking-kde3
+
+g2banking -> Obsoleted by aqbanking-gtk2
+
+aqhbci-ddvcard -> Obsoleted by libchipcard
+aqhbci-rsacard -> Obsoleted by libchipcard
+
+aqgeldkarte           -> Obsoleted by aqbanking-geldkarte
+aqgeldkarte-qt-tools  -> Obsoleted by aqbanking-geldkarte-qt3
+aqofxconnect          -> Obsoleted by aqbanking-ofx
+aqofxconnect-qt-tools -> Obsoleted by aqbanking-ofx-qt3
